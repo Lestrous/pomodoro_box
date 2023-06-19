@@ -4,10 +4,14 @@ import { indexTemplate } from './indexTemplate';
 import { App } from '../App';
 import compression from 'compression';
 
+console.log(`Server.js file start`);
+
 // eslint-disable-next-line no-undef
 const PORT = process.env.PORT || 3000;
 // eslint-disable-next-line no-undef
 const IS_DEV = process.env.NODE_ENV !== 'production';
+
+console.log(`Server PORT is ${PORT}`);
 
 const app = express();
 
