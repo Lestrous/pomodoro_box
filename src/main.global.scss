@@ -1,0 +1,44 @@
+@import 'react-toastify/scss/main';
+
+@import 'shared/styles/vendor';
+
+@import 'shared/styles/fonts';
+@import 'shared/styles/colors';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.page {
+  min-width: 320px;
+  scroll-behavior: smooth;
+  font-family: 'SF UI Display', serif;
+  color: $colorGrey33;
+  background-color: #fff;
+}
+
+.fixed-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.ul {
+  list-style: none;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.button {
+  cursor: pointer;
+}

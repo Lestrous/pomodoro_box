@@ -1,0 +1,134 @@
+@import '../styles/colors';
+
+.timerBlock {
+  width: 100%;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    padding: 0 40px;
+    background-color: $colorGreyC4;
+    color: #fff;
+
+    .headerTaskName {
+      font-weight: 700;
+    }
+  }
+
+  .header_activePomodoro,
+  .header_pausePomodoro,
+  .header_stop {
+    background-color: $colorRed;
+  }
+
+  .header_initialBreak,
+  .header_activeBreak,
+  .header_pauseBreak {
+    background-color: $colorGreen;
+  }
+
+  .body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 452px;
+    background-color: $colorGreyF4;
+
+    .settingsButton {
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      top: 15px;
+      right: 15px;
+      background-color: transparent;
+      border-radius: 8px;
+      border: none;
+    }
+
+    .settingsButton:hover,
+    .settingsButton:active {
+      background-color: $colorGreyDE;
+    }
+
+    .time {
+      font-weight: 200;
+      font-size: 150px;
+      margin-bottom: 9px;
+    }
+
+    .time_activePomodoro {
+      color: $colorRed;
+    }
+
+    .time_stop {
+      color: $colorDarkRed;
+    }
+
+    .time_activeBreak {
+      color: $colorGreen;
+    }
+
+    .taskDescription {
+      margin-bottom: 32px;
+
+      .taskNumber {
+        color: $colorGrey99;
+      }
+    }
+
+    .buttonsContainer {
+      display: flex;
+      gap: 25px;
+
+      .timerButton {
+        width: 141px;
+        height: 51px;
+        font-weight: 500;
+      }
+
+      .startButton,
+      .pauseButton,
+      .continueButton {
+        color: #fff;
+        background-color: $colorGreen;
+        border: 2px solid $colorGreen;
+      }
+
+      .startButton:hover,
+      .pauseButton:hover,
+      .continueButton:hover {
+        background-color: $colorDarkGreen;
+        border: 2px solid $colorDarkGreen;
+      }
+
+      .stopButton,
+      .skipButton,
+      .doneButton {
+        color: $colorRed;
+        background-color: transparent;
+        border: 2px solid $colorRed;
+      }
+
+      .stopButton:hover,
+      .stopButton:active,
+      .skipButton:hover,
+      .skipButton:active,
+      .doneButton:hover,
+      .doneButton:active {
+        color: #fff;
+        background-color: $colorRed;
+        border: 2px solid $colorRed;
+      }
+
+      .stopButton:disabled {
+        color: $colorGreyC4;
+        background-color: transparent;
+        border: 2px solid $colorGreyC4;
+      }
+    }
+  }
+}

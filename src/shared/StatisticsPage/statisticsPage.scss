@@ -1,0 +1,223 @@
+@import '../styles/colors';
+
+.statisticsPage {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 32px;
+  grid-template-areas:
+    "activity activity activity activity activity activity activity activity activity activity activity activity"
+    "description description description chart chart chart chart chart chart chart chart chart"
+    "pomodoro pomodoro pomodoro chart chart chart chart chart chart chart chart chart"
+    "focus focus focus focus pause pause pause pause stop stop stop stop";
+  padding: 88px 0 0;
+
+  .activitySection {
+    grid-area: activity;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+
+    .title {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .weekSelectionContainer {
+      position: relative;
+      height: 100%;
+
+      .weekSelection {
+        width: 370px;
+        height: 55px;
+        padding: 0 16px;
+        border: none;
+        text-align: left;
+        color: $colorGrey33;
+        background-color: $colorGreyF4;
+        font-family: 'SF UI Display', serif;
+      }
+    }
+  }
+
+  .sectionHeader {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+
+  .sectionHeaderIndent {
+    margin-bottom: 20px;
+  }
+
+  .workTimeText {
+    color: $colorRed;
+    font-weight: bold;
+  }
+
+  .descriptionSection {
+    grid-area: description;
+    height: 260px;
+  }
+
+  .chartSection {
+    grid-area: chart;
+    height: 100%;
+  }
+
+  .pomodoroSection,
+  .focusSection,
+  .pauseSection,
+  .stopSection {
+    height: 179px;
+  }
+
+  .focusSection,
+  .pauseSection,
+  .stopSection {
+    position: relative;
+  }
+
+  .pomodoroSection {
+    grid-area: pomodoro;
+
+    .pomodoroSectionAmountContainer,
+    .pomodoroSectionAmountFooter {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .pomodoroSectionAmountContainer {
+      height: 128px;
+      color: $colorGrey99;
+
+      .pomodoroSectionIcon {
+        width: 81px;
+        height: 81px;
+        margin-right: 15px;
+      }
+
+      .pomodoroSectionAmountText {
+        font-size: 24px;
+        font-weight: 700;
+      }
+    }
+
+    .pomodoroSectionAmountFooter {
+      height: 51px;
+      background-color: $colorRed;
+      color: #fff;
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+
+  .zeroTomatoIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .descriptionSection,
+  .chartSection,
+  .pomodoroSection,
+  .focusSection,
+  .pauseSection,
+  .stopSection {
+    background-color: $colorGreyF4;
+  }
+
+  .descriptionSection,
+  .focusSection,
+  .pauseSection,
+  .stopSection {
+    padding: 25px;
+  }
+
+  .focusSection {
+    grid-area: focus;
+  }
+
+  .focusSectionActive {
+    background-color: $colorLightOrange;
+  }
+
+  .pauseSection {
+    grid-area: pause;
+  }
+
+  .pauseSectionActive {
+    background-color: $colorLightPurple;
+  }
+
+  .stopSection {
+    grid-area: stop;
+  }
+
+  .stopSectionActive {
+    background-color: $colorLightBlue;
+  }
+
+  .sectionsNumbers {
+    font-size: 64px;
+  }
+
+  .sectionsIcons {
+    position: absolute;
+    top: 35px;
+    right: 35px;
+  }
+
+  .statisticsFocusIconActive > path {
+    stroke: $colorOrange;
+  }
+
+  .statisticsPauseIconActive > path {
+    stroke: $colorPurple;
+  }
+
+  .statisticsStopIconActive > path {
+    stroke: $colorBlue;
+  }
+}
+
+.weekSelectionArrow,
+.weekSelectionArrowReverted {
+  position: absolute;
+  display: block;
+  height: 55px;
+  width: 55px;
+  padding: 22.5px 19.5px;
+  top: 0;
+  right: 0;
+  pointer-events: none;
+  background-color: $colorGreyF4;
+  z-index: 10;
+}
+
+.weekSelectionDropdown {
+  position: absolute;
+  top: 0;
+
+  .weekSelectionDropdownOption {
+    display: flex;
+    align-items: center;
+    height: 55px;
+    width: 370px;
+    padding: 0 16px;
+    background-color: $colorGreyF4;
+    cursor: pointer;
+    z-index: 15;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $colorGreyDE;
+    }
+  }
+
+  .weekSelectionArrowReverted {
+    transform: rotate(180deg);
+    border-top: 1px solid $colorGreyDE;
+    z-index: 20;
+  }
+}

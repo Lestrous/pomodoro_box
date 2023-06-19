@@ -1,0 +1,35 @@
+@import '../styles/colors';
+@import '../styles/sizes';
+
+.headerContainer {
+  box-shadow: 0 10px 63px rgba(0, 0, 0, 0.07);
+}
+
+.listContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: $headerHeight;
+}
+
+.headerPomodoroContainer,
+.headerStatisticsContainer {
+  display: flex;
+  align-items: center;
+  color: $colorRed;
+}
+
+.headerPomodoroContainer:hover,
+.headerStatisticsContainer:hover,
+.headerStatisticsContainer:hover * {
+  color: $colorDarkRed;
+  fill: $colorDarkRed;
+}
+
+.pomodoroIcon {
+  margin-right: 12px;
+}
+
+.equalizerIcon {
+  margin-right: 9px;
+}

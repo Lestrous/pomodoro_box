@@ -1,0 +1,55 @@
+$font-path: './shared/fonts/';
+
+@font-face {
+  font-family: 'SF UI Display';
+  src: local('SF UI Display Ultralight'), local('#{$font-path}SFUIDisplay/SFUIDisplay-Ultralight'),
+  url('#{$font-path}SFUIDisplay/SFUIDisplay-Ultralight.woff2') format('woff2'),
+  url('#{$font-path}SFUIDisplay/SFUIDisplay-Ultralight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF UI Display';
+  src: local('SF UI Display Light'), local('#{$font-path}SFUIDisplay/SFUIDisplay-Light'),
+  url('#{$font-path}SFUIDisplay/SFUIDisplay-Light.woff2') format('woff2'),
+  url('#{$font-path}SFUIDisplay/SFUIDisplay-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF UI Display';
+  src: local('SF UI Display Regular'), local('#{$font-path}SFUIDisplay/SFUIDisplay-Regular'),
+  url('#{$font-path}SFUIDisplay/SFUIDisplay-Regular.woff2') format('woff2'),
+  url('#{$font-path}SFUIDisplay/SFUIDisplay-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF UI Display';
+  src: local('SF UI Display Medium'), local('#{$font-path}SFUIDisplay/SFUIDisplay-Medium'),
+  url('#{$font-path}SFUIDisplay/SFUIDisplay-Medium.woff2') format('woff2'),
+  url('#{$font-path}SFUIDisplay/SFUIDisplay-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF UI Display';
+  src: local('SF UI Display Semibold'), local('#{$font-path}SFUIDisplay/SFUIDisplay-Semibold'),
+  url('#{$font-path}SFUIDisplay/SFUIDisplay-Semibold.woff2') format('woff2'),
+  url('#{$font-path}SFUIDisplay/SFUIDisplay-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF UI Display';
+  src: local('SF UI Display Bold'), local('#{$font-path}SFUIDisplay/SFUIDisplay-Bold'),
+  url('#{$font-path}SFUIDisplay/SFUIDisplay-Bold.woff2') format('woff2'),
+  url('#{$font-path}SFUIDisplay/SFUIDisplay-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}

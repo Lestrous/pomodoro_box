@@ -1,0 +1,21 @@
+$colorVeryLightRed: #EA8979;
+$colorLightRed: #EE735D;
+$colorRed: #DC3E22;
+$colorDarkRed: #B7280F;
+$colorGreen: #A8B64F;
+$colorDarkGreen: #899441;
+$colorOrange: #FFAE35;
+$colorLightOrange: #FFDDA9;
+$colorPurple: #9C97D7;
+$colorLightPurple: #DFDCFE;
+$colorBlue: #7FC2D7;
+$colorLightBlue: #C5F1FF;
+
+$whiteLightness: 100%;
+
+$colorGreyF4: hsl(0, 0%, calc($whiteLightness - 4%));
+$colorGreyE4: hsl(0, 0%, calc($whiteLightness - 11%));
+$colorGreyDE: hsl(0, 0%, calc($whiteLightness - 13%));
+$colorGreyC4: hsl(0, 0%, calc($whiteLightness - 23%));
+$colorGrey99: hsl(0, 0%, calc($whiteLightness - 40%));
+$colorGrey33: hsl(0, 0%, calc($whiteLightness - 80%));

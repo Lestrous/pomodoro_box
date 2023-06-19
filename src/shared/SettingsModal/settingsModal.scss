@@ -1,0 +1,50 @@
+@import '../styles/colors';
+
+.modalContainer {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #3333338c;
+}
+
+.modal {
+  position: absolute;
+  width: 600px;
+  padding: 25px;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #fff;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.15);
+  border-radius: 7px;
+
+  .modalHeader {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .settingsContainer {
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    grid-auto-rows: 50px;
+    grid-row-gap: 25px;
+    grid-column-gap: 20px;
+
+    .settingsItemName {
+      align-self: center;
+      font-size: 22px;
+    }
+
+    .settingsItemValue {
+      font-size: 30px;
+      border: 1px solid $colorGrey99;
+      border-radius: 7px;
+      text-align: center;
+    }
+  }
+}

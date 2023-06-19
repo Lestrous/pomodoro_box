@@ -1,0 +1,71 @@
+{
+  "private": true,
+  "engines": {
+    "node": "18.x"
+  },
+  "scripts": {
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix",
+    "build:dev": "cross-env NODE_ENV=development webpack --config webpack.config.js",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
+    "dev": "cross-env NODE_ENV=development node ./bin/dev.js",
+    "show_outdated": "npm outdated",
+    "start:dev": "cross-env NODE_ENV=development node ./dist/server/server.js",
+    "start": "cross-env NODE_ENV=production node ./dist/server/server.js"
+  },
+  "devDependencies": {
+    "@hot-loader/react-dom": "^17.0.2",
+    "@types/react": "^17.0.53",
+    "@types/react-dom": "^17.0.18",
+    "@types/react-redux": "^7.1.25",
+    "@types/react-router-dom": "^5.3.3",
+    "@typescript-eslint/eslint-plugin": "^5.48.2",
+    "@typescript-eslint/parser": "^5.48.2",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.3",
+    "eslint": "^8.32.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "postcss": "^8.4.20",
+    "postcss-loader": "^7.0.2",
+    "postcss-preset-env": "^8.0.1",
+    "prettier": "^2.8.3",
+    "react-hot-loader": "^4.13.1",
+    "redux-devtools-extension": "^2.13.9",
+    "sass": "^1.58.2",
+    "sass-loader": "^13.2.0",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.2",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-middleware": "^6.0.1",
+    "webpack-hot-middleware": "^2.25.3",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
+    "axios": "^1.3.1",
+    "chart.js": "^4.3.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "nanoid": "^3.3.6",
+    "nodemon": "^2.0.20",
+    "react": "^17.0.2",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^17.0.2",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.10.0",
+    "react-toastify": "^9.1.3",
+    "redux": "^4.2.1",
+    "redux-thunk": "^2.4.2"
+  },
+  "browserslist": [
+    "last 2 version",
+    "cover 99.5%",
+    "not dead"
+  ]
+}
