@@ -20,7 +20,7 @@ compiler.run((err) => {
   });
   console.log(`__dirname: ${__dirname}`);
 
-  nodemon({
-    script: path.resolve(__dirname, '../dist/server/server.js'),
-  });
+  // nodemon({
+  //   script: path.resolve(__dirname, '../dist/server/server.js'),
+  // });
 });
