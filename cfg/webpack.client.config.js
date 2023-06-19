@@ -42,7 +42,6 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, '../dist/client'),
     filename: 'client.js',
-    publicPath: '//localhost:3001/static',
     clean: true,
   },
   module: {

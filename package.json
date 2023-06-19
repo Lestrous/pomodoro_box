@@ -6,12 +6,9 @@
   "scripts": {
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix",
-    "build:dev": "cross-env NODE_ENV=development webpack --config webpack.config.js",
-    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
-    "dev": "cross-env NODE_ENV=development node ./bin/dev.js",
     "show_outdated": "npm outdated",
-    "start:dev": "cross-env NODE_ENV=development node ./dist/server/server.js",
-    "start": "cross-env NODE_ENV=production node ./dist/server/server.js"
+    "dev": "cross-env NODE_ENV=development node ./bin/start.js",
+    "prod": "cross-env NODE_ENV=production node ./bin/start.js"
   },
   "devDependencies": {
     "@hot-loader/react-dom": "^17.0.2",
