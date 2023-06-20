@@ -1,8 +1,11 @@
 FROM node:18
 WORKDIR /app
-COPY package*.json ./
+#COPY package*.json ./
+COPY . /app
 RUN npm install
-CMD ["node", "./bin/prod.js"]
-COPY . .
+#ENV PORT 3000
+#ENV NODE_ENV production
 EXPOSE 3000
-CMD ["node", "./dist/server/server.js"]
+CMD ["npm", "run", "start"]
+#CMD ["node", "./bin/prod.js"]
+#CMD ["node", "./dist/server/server.js"]
