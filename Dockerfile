@@ -15,8 +15,8 @@ FROM node:18
 WORKDIR /app
 COPY . /app
 RUN npm install
-CMD ["npm", "run", "biuld"]
-EXPOSE 3000
 ENV PORT 3000
 ENV NODE_ENV production
+CMD ["webpack", "--config", "./webpack.config.js"]
+EXPOSE 3000
 CMD ["npm", "run", "start_cont"]
