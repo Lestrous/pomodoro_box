@@ -17,6 +17,7 @@ COPY . /app
 RUN npm install
 ENV PORT 3000
 ENV NODE_ENV production
-CMD ["webpack", "--config", "./webpack.config.js"]
+RUN npm run build
+#CMD ["webpack", "--config", "./webpack.config.js"]
 EXPOSE 3000
 CMD ["npm", "run", "start_cont"]
