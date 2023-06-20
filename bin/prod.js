@@ -21,7 +21,7 @@ compiler.run((err) => {
     console.log('Compilation was successful');
   });
 
-  nodemon({
-    script: path.resolve(__dirname, '../dist/server/server.js'),
-  });
+  // nodemon({
+  //   script: path.resolve(__dirname, '../dist/server/server.js'),
+  // });
 });

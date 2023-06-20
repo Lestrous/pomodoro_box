@@ -8,7 +8,9 @@
     "lint:fix": "eslint ./src --fix",
     "show_outdated": "npm outdated",
     "dev": "cross-env NODE_ENV=development node ./bin/dev.js",
-    "start": "cross-env NODE_ENV=production PORT=3000 node ./bin/prod.js"
+    "start": "cross-env NODE_ENV=production PORT=3000 node ./bin/prod.js",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
+    "start_prod": "cross-env NODE_ENV=production node ./dist/server/server.js"
   },
   "devDependencies": {
     "@hot-loader/react-dom": "^17.0.2",
