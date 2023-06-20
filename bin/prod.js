@@ -6,7 +6,6 @@ const path = require('path');
 console.log('prod.js enter');
 console.log(`__dirname: ${__dirname}`);
 const compiler = webpack([webpackServerConfig, webpackClientConfig]);
-console.log(compiler);
 
 compiler.run((err) => {
   console.log('Compilation start');
