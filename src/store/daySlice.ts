@@ -54,13 +54,13 @@ export const daySlice = createSlice({
     addDayTime: (state, action: PayloadAction<dayTimeStates>) => {
       switch (action.payload) {
         case 'pomodoro':
-          state.pomodoroTime += 60;
+          state.pomodoroTime += 1;
           break;
         case 'break':
-          state.breakTime += 60;
+          state.breakTime += 1;
           break;
         case 'pause':
-          state.pauseTime += 60;
+          state.pauseTime += 1;
           break;
       }
 

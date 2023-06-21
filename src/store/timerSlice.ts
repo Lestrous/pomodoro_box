@@ -174,7 +174,7 @@ export const timerSlice = createSlice({
       saveTimer(state);
     },
     timerGo: (state, action: PayloadAction<settingsState>) => {
-      state.time -= 60;
+      state.time -= 1;
 
       if (state.time === 0) {
         clearInterval(state.timerId);
