@@ -56,8 +56,6 @@ function getStateTime(
       return pomodoroTimeMinutes;
     case 'initialBreak':
       if (isBigBreak(state)) {
-        state.breakNumber = 0;
-
         return bigBreakTimeMinutes;
       }
 
@@ -245,7 +243,7 @@ export const timerSlice = createSlice({
       .addCase(
         settingsSlice.actions.setNewBreakTimeMinutes,
         (state, action: PayloadAction<number>) => {
-          if (state.state === 'initialBreak' || !isBigBreak(state)) {
+          if (state.state === 'initialBreak' && !isBigBreak(state)) {
             state.time = action.payload * 60;
 
             saveTimer(state);
@@ -255,7 +253,7 @@ export const timerSlice = createSlice({
       .addCase(
         settingsSlice.actions.setNewBigBreakTimeMinutes,
         (state, action: PayloadAction<number>) => {
-          if (state.state === 'initialBreak' || isBigBreak(state)) {
+          if (state.state === 'initialBreak' && isBigBreak(state)) {
             state.time = action.payload * 60;
 
             saveTimer(state);
