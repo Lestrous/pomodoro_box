@@ -80,6 +80,11 @@ export const tasksSlice = createSlice({
       saveTasks(state);
     },
     deleteTask: (state: TasksListState, action: PayloadAction<string>) => {
+      if (state.length === 1) {
+        toast.error('Нельзя удалить единственную задачу!');
+        return;
+      }
+
       const taskIndex = state.findIndex((task) => task.id === action.payload);
       state.splice(taskIndex, 1);
 
